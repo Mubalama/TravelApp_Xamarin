@@ -12,12 +12,13 @@
             <ResourceDictionary>
                 <Color x:Key="blueColor">#1E90FF</Color>
                 <Color x:Key="whiteColor">#FFFFFF</Color>
+                <Color x:Key="darkGreen">#003322</Color>
 
             <!--Defining a style (Implicit Style: if the style doesn't have a name it automatically applied to all target Element)
                 (Explicit Style: if the style has a name it wont be applied automatically to target element)-->
                     <!--The targetType property define the element which the style will be applied to-->
                 <Style x:Key="normalButton" TargetType="Button">
-                    <Setter Property="BackgroundColor" Value="{StaticResource blueColor}"/>
+                    <Setter Property="BackgroundColor" Value="{StaticResource darkGreen}"/>
                     <Setter Property="TextColor" Value="{StaticResource whiteColor}"/>
                 </Style>
              
