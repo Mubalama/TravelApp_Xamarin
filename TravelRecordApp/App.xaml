@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TravelRecordApp.App">
+    <Application.Resources>
+
+        <!-- Defining the Resources-->
+            <!--Resources dictionary-->
+            <ResourceDictionary>
+                <Color x:Key="blueColor">#1E90FF</Color>
+                <Color x:Key="whiteColor">#FFFFFF</Color>
+
+            <!--Defining a style (Implicit Style: if the style doesn't have a name it automatically applied to all target Element)
+                (Explicit Style: if the style has a name it wont be applied automatically to target element)-->
+                    <!--The targetType property define the element which the style will be applied to-->
+                <Style x:Key="normalButton" TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="{StaticResource blueColor}"/>
+                    <Setter Property="TextColor" Value="{StaticResource whiteColor}"/>
+                </Style>
+             
+                
+            </ResourceDictionary>
+        
+
+    </Application.Resources>
+</Application>
