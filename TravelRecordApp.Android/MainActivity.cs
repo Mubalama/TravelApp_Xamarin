@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.IO;
 
 namespace TravelRecordApp.Droid
 {
@@ -21,7 +22,19 @@ namespace TravelRecordApp.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+
+            // Defining a database path and store it into a string
+
+            string dbName = "travel_db.sqlite"; // the name of the file that contain the data structure
+
+            // Defining a folder path where the file will be located
+
+            string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            /// Defining the full path of the database
+
+            string fullPath = Path.Combine(folderPath, dbName);
+
+            LoadApplication(new App(fullPath));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

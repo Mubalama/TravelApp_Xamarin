@@ -6,11 +6,27 @@ namespace TravelRecordApp
 {
     public partial class App : Application
     {
+        // Storing database location in a variable
+
+        public static string DatabaseLocation = string.Empty;
         public App()
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+        }
+
+        /// <summary>
+        /// Specify the database locations depending on platform 
+        /// building constructors for local databases (Sqlite)
+        /// </summary>
+        public App(string databaseLocation)
+        {
+            InitializeComponent();
+
+            MainPage = new NavigationPage(new MainPage());
+
+            DatabaseLocation = databaseLocation;
         }
 
         protected override void OnStart()
