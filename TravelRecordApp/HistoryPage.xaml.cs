@@ -1,9 +1,10 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TravelRecordApp.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,5 +17,22 @@ namespace TravelRecordApp
         {
             InitializeComponent();
         }
+        // Reading data from the database
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation)) //we can use the using statement directly to close connection instead of using the close method
+            {
+                conn.CreateTable<Point>();
+                var post = conn.Table<Post>().ToList();
+                //conn.Close();
+                //// defining the source of data list
+                postListView.ItemsSource = post;
+
+            }
+
+        }
+
     }
 }
