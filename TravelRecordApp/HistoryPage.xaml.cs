@@ -34,5 +34,16 @@ namespace TravelRecordApp
 
         }
 
+        private void postListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            //create the variable of type post
+            var selectedPost = postListView.SelectedItem as Post;
+
+            //evaluate if selected post has a value
+            if (selectedPost != null)
+            {
+                Navigation.PushAsync(new PostDetailsPage(selectedPost));
+            }
+        }
     }
 }
