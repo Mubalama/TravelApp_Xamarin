@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelRecordApp.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelRecordApp.iOS", "TravelRecordApp.iOS\TravelRecordApp.iOS.csproj", "{B4F2538C-308D-45F1-BCDD-2A3C79AB0723}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelRecordApp", "TravelRecordApp\TravelRecordApp.csproj", "{85463570-3011-4702-AD6A-DF86EDDBB6F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelRecordApp", "TravelRecordApp\TravelRecordApp.csproj", "{85463570-3011-4702-AD6A-DF86EDDBB6F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
