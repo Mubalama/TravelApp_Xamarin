@@ -13,15 +13,18 @@ namespace TravelRecordApp.Droid
     [Activity(Label = "TravelRecordApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(bundle);
 
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.Essentials.Platform.Init(this, bundle);
+            global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            /// Initaialise the map for the application
+            Xamarin.FormsMaps.Init(this, bundle);
 
             // Defining a database path and store it into a string
 

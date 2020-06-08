@@ -24,6 +24,8 @@ namespace TravelRecordApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            // Itialize the mapps for this ios
+            Xamarin.FormsMaps.Init();
 
             // Defining a database path and store it into a string
 

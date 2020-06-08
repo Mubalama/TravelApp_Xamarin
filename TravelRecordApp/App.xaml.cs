@@ -6,7 +6,7 @@ namespace TravelRecordApp
 {
     public partial class App : Application
     {
-        // Storing database location in a variable
+        // Storing database location in a variable (DatabaseLocation)
 
         public static string DatabaseLocation = string.Empty;
         public App()
